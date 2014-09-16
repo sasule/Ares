@@ -1,0 +1,39 @@
+
+{
+    "name": "sasule/ares",
+    "type": "library",
+    "description": "Communicator to Czech Ministry od Finances ARES system",
+    "keywords": ["ares"],
+    "homepage": "http://sasuletrainz.cz",
+    "license": ["BSD-3-Clause", "GPL-2.0", "GPL-3.0"],
+    "authors": [
+        {
+            "name": "Alexandr Szöllös",
+            "homepage": "http://sasuletrainz.cz",
+            "email": "sasa.szollos@gmail.com"
+        }
+    ],
+    "support": {
+        "email": "sasa.szollos@gmail.com",
+        "issues": "https://github.com/sasule/Ares/issues"
+    },
+    "require": {
+        "nette/nette": "~2.2"
+    },
+    "require-dev": {
+        "nette/nette": "~2.2@dev"
+    },
+    "autoload": {
+        "psr-0": {
+            "Sasule\\Ares\\": "src/"
+        },
+        "classmap": [
+            "src/"
+        ]
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.3-dev"
+        }
+    }
+}
