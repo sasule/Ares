@@ -41,7 +41,13 @@ class Response extends Object
 
                                 if (intval($_data->{self::$ID_ANSWER_COUNT}) > 0) {
                                         if (property_exists($_data, self::$ID_ANSWER)) {
-                                                $this->_parseAnswers($_data->{self::$ID_ANSWER});
+                                                if (is_array($_data->{self::$ID_ANSWER})) {
+                                                        $this->_parseAnswers($_data->{self::$ID_ANSWER});
+                                                } else {
+                                                        $answer = $_data->{self::$ID_ANSWER};
+                                                        $this->_createEntry($answer->{self::$ID_ENTRY});
+                                                }
+
 
                                         }
                                 }
@@ -96,7 +102,6 @@ class Response extends Object
         }
 
 
-
         /**
          * Return count of entries
          * @return int
@@ -105,7 +110,6 @@ class Response extends Object
         {
                 return $this->count;
         }
-
 
 
         /**
