@@ -46,23 +46,19 @@ class Response extends Object
                                                 } else {
                                                         $answer = $_data->{self::$ID_ANSWER};
 
-                                                        if (is_array($answer->{self::$ID_ENTRY})) {
-                                                                foreach ($answer->{self::$ID_ENTRY} as $data) {
-                                                                        $this->_createEntry($data);
+                                                        if (property_exists($answer, self::$ID_ENTRY)) {
+                                                                if (is_array($answer->{self::$ID_ENTRY})) {
+                                                                        foreach ($answer->{self::$ID_ENTRY} as $data) {
+                                                                                $this->_createEntry($data);
+                                                                        }
+                                                                } else {
+                                                                        $this->_createEntry($answer->{self::$ID_ENTRY});
                                                                 }
-                                                        } else {
-                                                                $this->_createEntry($answer->{self::$ID_ENTRY});
                                                         }
-
-
                                                 }
-
-
                                         }
                                 }
-
                         }
-
                 }
                 return $this;
         }
