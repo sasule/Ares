@@ -1,7 +1,7 @@
 {
     "name": "sasule/ares",
     "type": "library",
-    "description": "Communicator to Czech Ministry od Finances ARES system",
+    "description": "Communicator to Czech Ministry of Finances ARES system",
     "keywords": ["ares"],
     "homepage": "http://sasuletrainz.cz",
     "license": ["BSD-3-Clause", "GPL-2.0", "GPL-3.0"],
