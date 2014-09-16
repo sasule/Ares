@@ -136,7 +136,7 @@ class KeyPart extends Object implements IObject
  */
 class InvalidKeyPartException extends \Exception
 {
-        const CODE = "84100";
+        const CODE = 84100;
         const MESSAGE = "KeyPart is invalid. Check if either one property of identification number, birth number or company name is set.";
 
         public function __construct($message = self::MESSAGE, $code = self::CODE, \Exception $previous = NULL)
