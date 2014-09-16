@@ -41,8 +41,9 @@ class KeyPartTest extends \Tester\TestCase
 
         public function testEmptyObjectException()
         {
-                Assert::exception(function () {
-                        $this->kp2->toRequestArray();
+                $kp2 = $this->kp2;
+                Assert::exception(function () use ($kp2) {
+                        $kp2->toRequestArray();
                 }, '\Sasule\Ares\Query\InvalidKeyPartException', \Sasule\Ares\Query\InvalidKeyPartException::MESSAGE, \Sasule\Ares\Query\InvalidKeyPartException::CODE);
         }
 
