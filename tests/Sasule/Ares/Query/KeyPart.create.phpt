@@ -31,11 +31,11 @@ class KeyPartTest extends \Tester\TestCase
 
         public function testSameData()
         {
-                Assert::same([
+                Assert::same(array(
                     'ICO' => 'xaxa',
                     'Rodne_cislo' => '8412275123',
                     'Obchodni_firma' => 'cn'
-                ], $this->kp->toRequestArray());
+                ), $this->kp->toRequestArray());
 
         }
 
