@@ -210,7 +210,7 @@ class RequestWrapper extends Object implements IObject
 
 class NoQueryException extends \Exception
 {
-        const CODE = "84103";
+        const CODE = 84103;
         const MESSAGE = "No query provided.";
 
         public function __construct($message = self::MESSAGE, $code = self::CODE, \Exception $previous = NULL)
